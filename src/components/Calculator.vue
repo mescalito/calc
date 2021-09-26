@@ -88,6 +88,11 @@ export default {
         this.numberOnScreen = "0";
         this.operatorSelected = false;
       }
+      // MAKE DISPLAY TO SHOW 0.
+      if (number === "." && !this.numberOnScreen.includes(".")) {
+        this.numberOnScreen = "0.";
+        return false;
+      }
       this.numberOnScreen === "0"
         ? (this.numberOnScreen = number)
         : (this.numberOnScreen += number);
